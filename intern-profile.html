@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intern Profile | PELRC</title>
+  <link rel="stylesheet" href="profile-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="Logo.png" alt="PELRC Logo" class="logo"/>
+    <h1>Intern Profile - PELRC</h1>
+  </div>
+</header>
+
+<div class="back-tab">
+  <a href="index.html">&larr; Back to Home</a>
+</div>
+
+<main>
+  <section class="form-section">
+    <h2>Create Intern Profile</h2>
+    <form id="internForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required />
+      </div>
+      <div class="form-group">
+        <label for="college">College/Institution</label>
+        <input type="text" id="college" required />
+      </div>
+      <div class="form-group">
+        <label for="skills">Technical Skills</label>
+        <input type="text" id="skills" placeholder="E.g., HTML, CSS, Python, IoT" />
+      </div>
+      <div class="form-group">
+        <label for="about">About You</label>
+        <textarea id="about" rows="4"></textarea>
+      </div>
+      <button type="submit">Save Profile</button>
+    </form>
+  </section>
+
+  <section class="display-section">
+    <h2>Intern Profile Preview</h2>
+    <div class="profile-card" id="profileCard" style="display: none;">
+      <h3 id="displayName"></h3>
+      <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+      <p><strong>College:</strong> <span id="displayCollege"></span></p>
+      <p><strong>Skills:</strong> <span id="displaySkills"></span></p>
+      <p><strong>About:</strong> <span id="displayAbout"></span></p>
+    </div>
+  </section>
+</main>
+
+
+
+
+<script>
+  const form = document.getElementById('internForm');
+  const profileCard = document.getElementById('profileCard');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('displayName').textContent = document.getElementById('name').value;
+    document.getElementById('displayEmail').textContent = document.getElementById('email').value;
+    document.getElementById('displayCollege').textContent = document.getElementById('college').value;
+    document.getElementById('displaySkills').textContent = document.getElementById('skills').value;
+    document.getElementById('displayAbout').textContent = document.getElementById('about').value;
+    profileCard.style.display = 'block';
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

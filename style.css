@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #2c2f38;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 50px;
+  object-fit: contain;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffa500;
+}
+
+.contact-section {
+  background-color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-info div {
+  margin-bottom: 1rem;
+  background: #e8f1f8;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.map-container {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.map-container img {
+  width: 110%;
+  max-width: 60%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.section-title {
+  background-color: #8AC7DB;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.section {
+  padding: 2rem;
+  background-color: #white;
+}
+
+.internship-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.internship-details .info-box {
+  background: #e8f1f8;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1 1 300px;
+}
+
+.internship-details img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+}
+
+.highlight-section {
+  background: #dae8f6;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.presentation-section,
+.fun-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+.presentation-section img,
+.fun-section img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.presentation-section img:hover,
+.fun-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #2c2f38;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  .presentation-section img,
+  .fun-section img {
+    width: 90%;
+    height: auto;
+  }
+
+  .internship-details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Project Showcase Section */
+.project-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin: 16px;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin: 0 16px 16px;
+  color: #555;
+}
+
+/* Optional: Section Title Style */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 40px 0 10px;
+  font-weight: 700;
+  color: #222;
+}
+
+
+
+.main-footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1da1f2;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+}
+
